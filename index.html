@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- Titulo --> 
+        <title>SN Encriptador Alura</title>
+        <!-- CSS --> 
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Fuentes --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="banner">
+            <img src="./img/logo-lock.png" alt="Logo-encriptador" class="logo-encriptador">
+            <h1 id="titulo_principal">Encriptador de texto</h1>
+            <a href="https://www.aluracursos.com/"><img src="./img/alura.jpg" alt="Logo-alura" class="logo-alura"></a>
+        </header>
+
+        <!-- Contenedor principal --> 
+        <main class="container">
+            <textarea name="text" id="texto" class="texto" cols="35" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+          
+            <!-- Mensaje no encontrado --> 
+            <div class="message" id="mesagge">
+                   
+                <section class="empty" id="empty">
+                    <img src="./img/No message.png" alt="Imágen de mensaje no encontrado" id="nomsgimg">
+                    <h1 id="nomsg">Mensaje no encontrado</h1>
+                    <p id="nomsgdesc">Ingresa el mensaje a encriptar/desencriptar</p>
+                </section>
+                
+                <!-- Resultado -->
+                <section class="resultmsg">
+                    <textarea name="text" id="result" class="texto" cols="50" rows="12"></textarea>
+                    <input type="submit" value="Copiar" class="copiar" id="copiar">
+                </section>
+                
+            </div>
+
+            <!-- Aviso -->
+            <div class="warn">
+                <p class="iconwarn" id="iconwarn">⚠</p>
+                <p class="textwarn">Solo se permite letras minúsculas y sin acento</p> 
+             </div>
+             
+            <!-- Botones --> 
+            <section class="buttons">
+
+                <!-- Encriptar -->
+                <input type="submit" value="Encriptar" class="encriptar" id="encriptar">
+
+                <!-- Desencriptar -->
+                <input type="submit" value="Desencriptar" class="desencriptar" id="desencriptar">
+
+            </section>
+            
+
+        </main>
+
+        <!-- Pie de pagina --> 
+        <footer>
+            <div class="footertext">
+                <p >Realizado y diseñado por:</p>
+                <p style="font-weight: bold; margin: 5px 0 5px 0;">Steven Nouel</p>
+                <p>Challenge Encriptador de texto - Alura 2022</p>
+                <p>Contacto</p>
+            </div>
+            <div class="footerimg">
+                <a href="https://www.instagram.com/osi.tech"> <img src="./img/instagram.png" alt="Instagram" id="instagramimg"></a>
+                <a href="https://www.linkedin.com/in/stevennouel/"> <img src="./img/LinkedIn.png" alt="LinkedIn" id="linkedinimg"></a>
+                <a href="mailto:osi.tech@outlook.com"> <img src="./img/mail.png" alt="Mail" id="mailimg"></a>
+            </div>
+        </footer>
+
+    </body>
+
+    <script src="./js/funcion.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</html>

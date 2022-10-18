@@ -1,0 +1,362 @@
+*{
+box-sizing: border-box;
+}
+
+
+body{
+    background: linear-gradient(rgb(255, 255, 255),rgb(17, 54, 90));
+    background-attachment: fixed;
+    width: 100%;
+}
+
+/*Banner*/
+.banner{
+    display: flex;
+    position: relative;
+    padding: 5px;
+    height: 65px;
+    width: auto;
+    margin: 0 auto;
+}
+.logo-encriptador{
+    display: inline;
+    width: 100px;
+    height: 60px;
+}
+
+.logo-alura{
+    width: 70px;  
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+.logo-alura:hover{
+transform: scale(1.1) rotate(0.0deg);
+}
+
+#titulo_principal{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0px 3px 3px rgba(39, 64, 90, 0.521);
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: inline;
+    position: relative;
+    color: rgb(17, 54, 90);
+}
+
+/*Main*/
+main{
+    display:block;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px 0;
+    display: block;
+}
+
+/*Area texto*/
+.texto{
+    display: inline-block;
+    resize: none;
+    padding: 15px;
+    height: 50%;
+    width: 59%;
+    border: none;
+    border-radius: 10px;
+    background-color:rgba(17, 54, 90,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    outline: none;
+}
+
+.texto::placeholder{
+    color:white;
+}
+
+#texto:focus{
+   transform: scale(1.01);
+   border: none;
+}
+
+.warn{
+    display: inline-block;
+    margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bold;
+    width: 50%;
+}
+
+.iconwarn, .textwarn{
+    display: inline-block;
+}
+
+#iconwarn{
+    margin-right: 10px;
+    animation: color-change 1.5s infinite;
+}
+
+@keyframes color-change {
+    0% { color: rgb(255, 255, 255); }
+    50% { color: rgb(240, 171, 44); }
+    100% { color: rgb(235, 153, 2) }
+  }
+
+/*Buttons*/
+
+.buttons{
+    text-align: left;
+    margin-top: 15px;
+    display: inline-block;
+    width: 50%;
+}
+
+ .encriptar, .desencriptar{
+    background-color: rgb(17, 54, 90);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 4px;
+    width: 100%;
+    min-width: 50px; 
+    max-width: 200px;
+    transition: ease-in-out .2s
+ }
+
+.resultmsg{
+    text-align: center;
+}
+
+ .copiar{
+    background-color: rgb(17, 54, 90);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    display: none;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0 4px;
+    width: 100%;
+    min-width: 50px; 
+    max-width: 200px;
+    transition: ease-in-out .2s
+ }
+
+
+input:hover{
+    background-color: rgb(17, 54, 90, 0.5);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+input:active{
+    background-color: rgba(255, 255, 255);
+    color: rgb(17, 54, 90);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input .copiar{
+    display: none;
+}
+
+#encriptar, #desencriptar{
+    margin-top: 20px;
+}
+
+/*Mensaje*/
+
+.message{
+    float: right;
+    vertical-align: top;
+    width: 35%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: 1s;
+    background-color:rgba(17, 54, 90,0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.empty{
+  padding: 30px 20px;
+}
+
+#nomsgimg{
+    visibility: visible;
+    user-select: none;
+    margin: 0 0 15px 30px;
+}
+
+.message img{
+    width: 80%;
+}
+
+#nomsg{
+    visibility: visible;
+}
+
+.message h1{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.message p{
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#result{
+    width: 100%;
+    background-color:transparent;
+    color: white;
+    visibility: visible;
+    text-align: left;
+    display: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    resize: none;
+}
+
+
+
+
+/*Footer*/
+footer{
+    width: 100%;
+    margin-top: 300px;
+}
+
+.footertext{
+    font-family: 'Ubuntu', sans-serif; ;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footerimg{
+    text-align: center;
+}
+
+#linkedinimg{
+    width: 40px;
+    height: 30px;
+    margin:  10px 10px 10px 0;
+    display: inline;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+#linkedinimg:hover{
+    transform: scale(1.4) rotate(0.0deg);;
+}
+
+#instagramimg{
+    width: 40px;
+    height: 30px;
+    margin:  10px 10px 10px 0;
+    display: inline;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+#instagramimg:hover{
+    transform: scale(1.4) rotate(0.0deg);
+}
+
+#mailimg{
+    width: 40px;
+    height: 30px;
+    margin:  10px 0 10px 0;
+    display: inline;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+}
+
+#mailimg:hover{
+    transform: scale(1.4) rotate(0.0deg);
+}
+
+/* For Mobile */
+@media only screen and (max-width: 1024px){
+     .container, .texto, .message, .banner, .footertext, .warn, .buttons{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    }
+
+    #titulo_principal{
+        font-size: 30px;
+    }
+
+    .logo-alura{
+        margin: 10px auto;
+    }
+
+    .texto, .message{
+    margin-top: 40px;
+    display: block;
+    padding: 15px;
+    float: none;
+    }
+
+    .warn{
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+    }
+
+    .iconwarn, .textwarn{
+        display: inline;;
+    }
+
+    .buttons{
+        margin-top: 30px;
+        display: block;
+    }
+
+     .encriptar,.desencriptar{
+        display: block;
+        margin: 5px auto;
+    }
+
+    .copiar{
+        display: none;
+    }
+
+
+    #logo-linkedin, #logo-instagram, #logo-mail{
+        margin: 20px auto;
+    }
+}
